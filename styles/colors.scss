@@ -121,5 +121,5 @@ $transparent-gray: transparent-gray;
 
 // Get the named color with the proper theme.
 @function color($colorName) {
-  @return var(--#{$colorName});
+	@return var(--#{$colorName});
 }

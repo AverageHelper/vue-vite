@@ -52,6 +52,38 @@
 
 	"overrides": [
 		{
+			"files": ["**/*.vue"],
+			"parserOptions": {
+				"parser": "@typescript-eslint/parser",
+				"project": "./tsconfig.prod.json",
+				"tsconfigRootDir": "./",
+				"extraFileExtensions": [".vue"],
+				"plugins": ["@typescript-eslint", "import"]
+			},
+			"extends": [
+				"plugin:import/typescript",
+				"@vue/typescript/recommended",
+				"plugin:vue/recommended",
+				"@vue/prettier/recommended",
+				"@vue/prettier/@typescript-eslint",
+				"eslint:recommended",
+				"plugin:@typescript-eslint/recommended",
+				"plugin:@typescript-eslint/recommended-requiring-type-checking"
+			],
+			"rules": {
+				"vue/no-unused-components": "warn",
+				"vue/component-name-in-template-casing": ["error", "PascalCase"],
+				"vue/custom-event-name-casing": "warn",
+				"vue/match-component-file-name": [
+					"warn",
+					{
+						"extensions": ["vue"],
+						"shouldMatchCase": true
+					}
+				]
+			}
+		},
+		{
 			"files": ["src/**/*.test.ts", "tests/**/*.ts", "**/__mocks__/**/*.ts"],
 			"extends": ["plugin:prettier/recommended"],
 			"plugins": ["prettier", "@typescript-eslint"],
