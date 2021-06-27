@@ -1,6 +1,6 @@
-# Vue 3 + Typescript + Vite
+# accountable
 
-This template should help get you started developing with Vue 3 and Typescript in Vite.
+A Vue app for managing financial accounts.
 
 ## Recommended IDE Setup
 
